@@ -9,6 +9,6 @@ export class AuthGuard implements CanActivate {
     const request = context.switchToHttp().getRequest();
     const token = request.headers['authorization'];
     // Implement your authentication logic here
-    return token === 'your-secret-token'; // Example: check for a specific token
+    return token === '1234'; // Example: check for a specific token
   }
 }
