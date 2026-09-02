@@ -4,6 +4,7 @@ import { AppService } from './app.service.js';
 import { CustomersModule } from './customers/customers.module.js';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggingMiddleware } from './common/middleware/logging/logging.middleware.js';
+import { AuthModule } from './auth/auth.module.js';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { LoggingMiddleware } from './common/middleware/logging/logging.middlewar
       autoLoadEntities: true,
       synchronize: true,
     }),
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
