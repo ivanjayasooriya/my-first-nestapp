@@ -5,6 +5,7 @@ import { CustomersModule } from './customers/customers.module.js';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggingMiddleware } from './common/middleware/logging/logging.middleware.js';
 import { AuthModule } from './auth/auth.module.js';
+import { UserModule } from './user/user.module.js';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { AuthModule } from './auth/auth.module.js';
       synchronize: true,
     }),
     AuthModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
